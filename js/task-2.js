@@ -11,6 +11,7 @@ function makePizza(pizzaName) {
 }
 
 // Пиши код ниже этой строки
-function makeMessage(pizzaName) {
-  return;
+function makeMessage(pizzaName, callback) {
+  return callback (pizzaName);
 }
+console.log(makeMessage);
