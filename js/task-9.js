@@ -15,8 +15,11 @@ function composeMessage(customerName) {
 }
 // Пиши код ниже этой строки
 
-const pizzaPalaceComposer = composeMessage;
+const pizzaPalaceComposer = composeMessage.bind(pizzaPalace);
 const pizzaPalaceMessage = pizzaPalaceComposer('Манго');
 
-const burgerShackComposer = composeMessage;
+const burgerShackComposer = composeMessage.bind(burgerShack);
 const burgerShackMessage = burgerShackComposer('Поли');
+
+console.log(pizzaPalaceMessage);
+console.log(burgerShackMessage);
